@@ -1,0 +1,45 @@
+package ru.avalon.blog.servlets;
+
+import java.io.IOException;
+import javax.ejb.EJB;
+import javax.inject.Inject;
+import javax.naming.AuthenticationException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+import ru.avalon.blog.services.AuthService;
+import ru.avalon.blog.sevices.UserService;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+
+    @Inject AuthService authService;
+    
+    private void redirect(HttpServletResponse response, String location) throws ServletException, IOException{
+        response.setHeader("Location", location);
+        response.setStatus(302);
+    }
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if(authService.isSignIn()){
+            redirect(response, request.getContextPath());
+        }else{
+            request.getRequestDispatcher("/WEB-INF/pages/auth/login.jsp").forward(request, response);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        try{
+            authService.signIn(email, password);
+        }catch(AuthenticationException e){
+            request.setAttribute("error", e.getMessage());
+        }
+        doGet(request, response);
+    }
+    
+    
+}
