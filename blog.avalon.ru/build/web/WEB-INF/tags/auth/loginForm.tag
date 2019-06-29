@@ -10,7 +10,7 @@
         <input type="password" name="password" placeholder="Password" required="">
     </p>
     <p class="row gap-bottom">
-        <a href="${pageContext.servletContext.contextPath}/reg">Регистрация</a>
+        <a href="${pageContext.servletContext.contextPath}/register">Регистрация</a>
         <button class="pull-right">Авторизация</button>
     </p>
 </form>

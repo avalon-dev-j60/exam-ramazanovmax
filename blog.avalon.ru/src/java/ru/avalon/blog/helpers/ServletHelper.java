@@ -11,7 +11,7 @@ public final class ServletHelper {
                                 HttpServletResponse response,
                                 String location)
                     throws SecurityException, IOException{
-        response.setHeader("Loaction", location);
+        response.setHeader("Location", location);
         response.setStatus(HttpServletResponse.SC_FOUND);
     } 
     
@@ -19,7 +19,7 @@ public final class ServletHelper {
                                 HttpServletResponse response)
                     throws SecurityException, IOException{
         String referer = request.getHeader("Referer");
-        if(referer == null || referer.equals(request.getRequestURL())){
+        if(referer == null || referer.equals(request.getRequestURL().toString())){
             referer = request.getContextPath();
         }
         redirect(request, response, referer);

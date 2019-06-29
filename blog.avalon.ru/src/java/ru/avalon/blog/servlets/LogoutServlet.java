@@ -5,7 +5,6 @@
  */
 package ru.avalon.blog.servlets;
 
-import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import javax.inject.Inject;
 import javax.servlet.ServletException;

@@ -5,6 +5,8 @@ import javax.inject.*;
 import javax.naming.AuthenticationException;
 import javax.servlet.http.*;
 import ru.avalon.blog.entities.User;
+import ru.avalon.blog.exceptions.DataIntegrityViolationException;
+import ru.avalon.blog.exceptions.RequiredDataException;
 import ru.avalon.blog.sevices.UserService;
 
 @Stateless
@@ -42,6 +44,22 @@ public class AuthService {
         
     }
     
-    public void register(User user){
+    public void register(String email, String password, String confPassword) 
+            throws RequiredDataException, DataIntegrityViolationException{
+        if(email == null || email.trim().isEmpty()){
+            throw new RequiredDataException("Требуется email");
+        }else if(password == null || password.trim().isEmpty()){
+            throw new RequiredDataException("Требуется пароль");
+        }else if(confPassword == null || confPassword.trim().isEmpty()){
+            throw new RequiredDataException("Требуется подтверждение пароля");
+        }else if(!password.equals(confPassword)){
+            throw new DataIntegrityViolationException("Неправильное подтверждение пароля");
+        }
+        User user = userService.findByEmail(email);
+        if(user != null){
+            throw new DataIntegrityViolationException("Email уже зарегистрирован");
+        }
+        user = new User(email, password);
+        userService.create(user);
     }
 }
