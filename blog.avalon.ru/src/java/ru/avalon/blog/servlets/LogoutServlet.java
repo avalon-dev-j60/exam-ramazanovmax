@@ -29,8 +29,4 @@ public class LogoutServlet extends HttpServlet{
         authService.signOut();
         ServletHelper.redirectToReferer(request, response);
     }
-    
-    
-            
-    
 }
