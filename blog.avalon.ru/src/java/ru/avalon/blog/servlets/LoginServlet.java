@@ -16,16 +16,11 @@ public class LoginServlet extends HttpServlet{
 
     @Inject AuthService authService;
     
-    private void redirect(HttpServletResponse response, String location) throws ServletException, IOException{
-        response.setHeader("Location", location);
-        response.setStatus(302);
-    }
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(authService.isSignIn()){
             ServletHelper.redirectToReferer(request, response);
-            redirect(response, request.getContextPath());
         }else{
             request.getRequestDispatcher("/WEB-INF/pages/auth/login.jsp").forward(request, response);
         }
