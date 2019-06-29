@@ -18,7 +18,14 @@
             <a href="${context}/contacts.jsp">Контакты</a>
         </li>
         <li class="pull-right">
-            <a href="${context}/login">Войти</a>
+            <c:choose>
+                <c:when test="${empty sessionScope.user}">
+                    <a href="${context}/login">Войти</a> 
+                </c:when>
+                <c:otherwise>
+                    <a href="${context}/logout">Выйти</a> 
+                </c:otherwise>
+            </c:choose>
         </li>
     </ul>
 </nav>

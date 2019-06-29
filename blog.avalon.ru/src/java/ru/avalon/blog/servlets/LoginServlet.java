@@ -7,6 +7,7 @@ import javax.naming.AuthenticationException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
+import ru.avalon.blog.helpers.ServletHelper;
 import ru.avalon.blog.services.AuthService;
 import ru.avalon.blog.sevices.UserService;
 
@@ -23,6 +24,7 @@ public class LoginServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(authService.isSignIn()){
+            ServletHelper.redirectToReferer(request, response);
             redirect(response, request.getContextPath());
         }else{
             request.getRequestDispatcher("/WEB-INF/pages/auth/login.jsp").forward(request, response);
