@@ -3,10 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="labj">
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/LoginServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/RegisterServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/LogoutServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/helpers/ServletHelper.java</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/resources/errors_ru.properties</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/tags/articles/create.tag</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/PublicationViewServlet.java</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/resources/labels_ru.properties</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/resources/labels.properties</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/PublicationsServlet.java</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/resources/errors.properties</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/index.jsp</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/PublicationCreateServlet.java</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/pages/articles/all.jsp</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/services/AuthService.java</file>
+            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/pages/articles/view.jsp</file>
         </group>
     </open-files>
 </project-private>
