@@ -21,7 +21,8 @@ public class PublicationViewServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         if(id != null){
-            Publication publication = publicationService.find(id);
+            long lid = Long.parseLong(id);
+            Publication publication = publicationService.find(lid);
             if(publication != null){
                 request.setAttribute("publication", publication);
                 request.getRequestDispatcher(JSP).forward(request, response);

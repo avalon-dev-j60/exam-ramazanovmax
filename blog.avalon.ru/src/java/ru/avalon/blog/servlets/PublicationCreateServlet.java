@@ -49,7 +49,8 @@ public class PublicationCreateServlet extends HttpServlet{
             redirect(request, response, request.getContextPath());
             publicationService.create(publication);
         } catch (Exception e) {
-            
+            request.setAttribute("error", e.getMessage());
+            doGet(request, response);
         }
     }
     

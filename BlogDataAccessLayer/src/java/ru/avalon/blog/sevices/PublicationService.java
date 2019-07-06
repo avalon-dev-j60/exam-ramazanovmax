@@ -28,7 +28,7 @@ public class PublicationService {
     public void delete(Publication publication){
         em.remove(publication);
     }
-    public Publication find(Object id){
+    public Publication find(long id){
         try {
             return em.createNamedQuery("find-publication-by-id", Publication.class).setParameter("id", id).getSingleResult();
         } catch (NoResultException e) {
