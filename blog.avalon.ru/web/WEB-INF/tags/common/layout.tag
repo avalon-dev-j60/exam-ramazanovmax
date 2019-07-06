@@ -1,13 +1,8 @@
-<%-- 
-    Document   : layout
-    Created on : 15.06.2019, 12:35:28
-    Author     : makram
---%>
-
 <%@tag description="put the tag description here" pageEncoding="UTF-8"%>
 <%@taglib prefix="common" tagdir="/WEB-INF/tags/common/"%>
 <%-- The list of normal or fragment attributes can be specified here: --%>
-<%@attribute name="title"%>
+<%@attribute name="title" required="true"%>
+
 <!DOCTYPE html>
 <html>
     <head>

@@ -4,16 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="labj">
             <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/LoginServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/tags/auth/loginForm.tag</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/pages/auth/register.jsp</file>
             <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/RegisterServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/tags/auth/registerForm.tag</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/pages/auth/login.jsp</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/web/WEB-INF/tags/common/navigation.tag</file>
             <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/servlets/LogoutServlet.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/exceptions/RequiredDataException.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/exceptions/DataIntegrityViolationException.java</file>
-            <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/services/AuthService.java</file>
             <file>file:/C:/Users/makram/NetBeansProject/j60GIT/exam-ramazanovmax/blog.avalon.ru/src/java/ru/avalon/blog/helpers/ServletHelper.java</file>
         </group>
     </open-files>

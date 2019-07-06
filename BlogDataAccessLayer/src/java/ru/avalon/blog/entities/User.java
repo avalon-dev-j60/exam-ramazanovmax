@@ -1,6 +1,7 @@
 package ru.avalon.blog.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @NamedQueries({
@@ -15,10 +16,14 @@ public class User implements Serializable{
     @Id
     @GeneratedValue
     private long id;
-    
     private String email;
-    
     private String password;
+
+    @OneToMany(cascade = {CascadeType.REMOVE, CascadeType.REFRESH},
+                mappedBy = "author",
+                targetEntity = Publication.class)
+    private List<Publication> publications;
+    
 
     public User(String email, String password) {
         this.email = email;

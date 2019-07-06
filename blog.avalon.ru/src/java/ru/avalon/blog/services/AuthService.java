@@ -1,5 +1,7 @@
 package ru.avalon.blog.services;
 
+
+
 import javax.ejb.*;
 import javax.inject.*;
 import javax.naming.AuthenticationException;
@@ -18,9 +20,9 @@ public class AuthService {
     public void signIn(String email, String password) throws AuthenticationException{
         User user = userService.findByEmail(email);
         if(user == null){
-            throw new AuthenticationException("Пользователь не найден!");
+            throw new AuthenticationException("error.user.unknow");
         } else if(!password.equals(user.getPassword())){
-            throw new AuthenticationException("Не верный пароль!");
+            throw new AuthenticationException("error.password.wrong");
         }
         
         session.setAttribute("user", email);
@@ -40,24 +42,24 @@ public class AuthService {
         if(email != null){
             return userService.findByEmail(email);
         }
-        throw new AccessLocalException("Пользователь не авторизован");
+        throw new AccessLocalException("error.user.required");
         
     }
     
     public void register(String email, String password, String confPassword) 
             throws RequiredDataException, DataIntegrityViolationException{
         if(email == null || email.trim().isEmpty()){
-            throw new RequiredDataException("Требуется email");
+            throw new RequiredDataException("error.email.required");
         }else if(password == null || password.trim().isEmpty()){
-            throw new RequiredDataException("Требуется пароль");
+            throw new RequiredDataException("error.password.required");
         }else if(confPassword == null || confPassword.trim().isEmpty()){
-            throw new RequiredDataException("Требуется подтверждение пароля");
+            throw new RequiredDataException("error.password.confirmation.required");
         }else if(!password.equals(confPassword)){
-            throw new DataIntegrityViolationException("Неправильное подтверждение пароля");
+            throw new DataIntegrityViolationException("error.password.confirmation.incorrect");
         }
         User user = userService.findByEmail(email);
         if(user != null){
-            throw new DataIntegrityViolationException("Email уже зарегистрирован");
+            throw new DataIntegrityViolationException("error.user.duplicated");
         }
         user = new User(email, password);
         userService.create(user);
